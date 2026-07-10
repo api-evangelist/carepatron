@@ -1,0 +1,110 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Carepatron
+providerId: carepatron
+created: '2026-07-10'
+modified: '2026-07-10'
+reconciled: false
+tags:
+- Healthcare
+- Practice Management
+- EHR
+- Plans
+description: >-
+  Carepatron is priced per practitioner (per user) per month, with a
+  free-forever tier and two paid tiers. Pricing is for the Carepatron
+  application itself, not for API access - Carepatron does not yet sell or
+  document a public developer API. The pricing page lists "API (coming soon)"
+  as an Advanced-plan feature, so programmatic access is planned but not
+  generally available. Prices below are captured from the public pricing page
+  and reflect a promotional "Save 50% for 6 months" discount on the paid tiers;
+  the regular per-user monthly rates are noted in each plan.
+notes: >-
+  Prices are per user (per practitioner) per month and were current on the
+  pricing page at the review date. Carepatron runs promotions, so verify the
+  regular vs. promotional rate during reconciliation. There is no separate API
+  price because there is no publicly available API yet - "API (coming soon)" is
+  bundled into the Advanced plan.
+sources:
+- https://www.carepatron.com/pricing/
+- https://www.carepatron.com/
+plans:
+- id: carepatron-free
+  name: Free
+  type: free
+  description: >-
+    Free-forever tier for solo and starting practitioners. Includes telehealth,
+    client portal, scheduling, and the AI scribe / note taker, with unlimited
+    clients and practitioners (still billed per user where applicable). Bounded
+    by 1 GB storage, 1M AI tokens, and 1K tasks.
+  entries:
+  - label: Per User
+    name: free_per_user
+    type: flat
+    metric: user
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0
+    userMultiplied: true
+  elements:
+  - name: Telehealth
+  - name: Client Portal
+  - name: AI Scribe and Note Taker
+  - name: 1 GB Storage
+  - name: 1M AI Tokens
+  - name: 1K Tasks
+- id: carepatron-plus
+  name: Plus
+  type: paid
+  description: >-
+    Most popular paid tier. Adds unlimited storage, unlimited AI tokens,
+    unlimited tasks, and advanced workflows on top of the Free tier. Priced per
+    user per month.
+  entries:
+  - label: Per User
+    name: plus_per_user
+    type: flat
+    metric: user
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $15.50 per user/month promotional (regular $31 per user/month)
+    userMultiplied: true
+  elements:
+  - name: Everything in Free
+  - name: Unlimited Storage
+  - name: Unlimited AI Tokens
+  - name: Unlimited Tasks
+  - name: Advanced Workflows
+- id: carepatron-advanced
+  name: Advanced
+  type: paid
+  description: >-
+    Top tier for larger or more complex practices. Adds group telehealth, roles
+    and permissions, white labeling, and premium support - and lists
+    "API (coming soon)" as a forthcoming feature. Priced per user per month.
+  entries:
+  - label: Per User
+    name: advanced_per_user
+    type: flat
+    metric: user
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $19.50 per user/month promotional (regular $39 per user/month)
+    userMultiplied: true
+  elements:
+  - name: Everything in Plus
+  - name: Group Telehealth
+  - name: Roles and Permissions
+  - name: White Labeling
+  - name: Premium Support
+  - name: API (coming soon)
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

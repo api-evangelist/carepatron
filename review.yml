@@ -1,0 +1,88 @@
+aid: carepatron
+name: Carepatron
+review:
+  question: Does Carepatron expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-10'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Carepatron does not publish any developer
+    API at all - there is no documented REST surface, no base URL, no API
+    reference, and therefore no server-push transport (WebSocket or SSE) to
+    model. Carepatron's own pricing page lists "API (coming soon)" on its
+    Advanced plan, confirming that a public API is not yet available as of the
+    review date.
+findings:
+  summary: |
+    Carepatron does not publish a documented public WebSocket API - and, more
+    fundamentally, it does not publish a documented public developer API of any
+    kind as of the review date. Carepatron is a cloud-based healthcare practice
+    management / EHR platform (clients, scheduling, telehealth, AI clinical
+    notes, billing). Its pricing page explicitly lists "API (coming soon)" as an
+    Advanced-plan feature, meaning programmatic access is planned but not yet
+    generally available. There is no developer portal, no API reference, no
+    published base URL, no OpenAPI/Swagger definition, and no official SDK.
+    Third-party connectivity today is limited to a small set of native
+    integrations (Zoom, accounting software, Google Tag Manager) surfaced in the
+    "Connecting Third Party Apps" help collection. No REST, SSE, or WebSocket
+    (ws:// or wss://) endpoint is documented anywhere.
+  accessModel: |
+    Gated / not-yet-available. Carepatron markets "API (coming soon)" on the
+    Advanced tier. Any programmatic use today is through native in-app
+    integrations, not a documented, self-serve developer API. Prospective API
+    users would need to contact Carepatron directly. The APIs.json entry lists
+    four logical product-area APIs (Clients, Appointments, Notes/Documentation,
+    Billing) that are modeled from Carepatron's feature set for cataloging
+    purposes only; their endpoints are marked endpointsModeled and are NOT
+    confirmed or documented.
+  endpointsModeled: true
+  endpointsConfirmedRest: []
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented. Pricing page shows "API (coming soon)" on the Advanced plan.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events surface is documented (no public API exists).
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Carepatron's site, help center, or GitHub as of the review date.
+  integrations:
+    - name: Zoom
+      note: Native telehealth/video integration surfaced in the help center.
+    - name: Accounting Software
+      note: Native accounting integration category (specific vendor not named on the help collection landing page).
+    - name: Google Tag Manager
+      note: Analytics/tracking integration for appointment events.
+sources:
+  - url: https://www.carepatron.com/pricing/
+    type: Pricing
+    note: Lists "API (coming soon)" on the Advanced plan; confirms no current public API. Plans - Free, Plus, Advanced.
+  - url: https://help.carepatron.com/en/
+    type: Documentation
+    note: Help center. No developer API reference; documentation covers forms, notes, intakes, and third-party app connections only.
+  - url: https://help.carepatron.com/en/collections/3545338-connecting-third-party-apps
+    type: Documentation
+    note: Third-party integrations (Zoom, accounting software, Google Tag Manager). References a "Does Carepatron support API?" article but no developer docs.
+  - url: https://help.carepatron.com/en/collections/6831698-documentation
+    type: Documentation
+    note: Product documentation collection. No API, API keys, webhooks, or Zapier content.
+  - url: https://github.com/Carepatron
+    type: SourceCode
+    note: Public GitHub org has only build/tooling repos (force-update-build-action, Eng.tst, yarn-plugin-after-install). No API, SDK, or API-docs repository.
+  - url: https://www.carepatron.com/
+    type: Website
+    note: Product overview - practice management / EHR for practitioners. No developer or API section.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists, and no public developer API of any kind is
+    documented. No AsyncAPI or OpenAPI document was created because there is no
+    documented API surface to model. The APIs.json entry honestly records the
+    gated "API (coming soon)" status and lists four modeled product-area APIs
+    (endpointsModeled: true) without fabricating base URLs, endpoints, or specs.

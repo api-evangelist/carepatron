@@ -1,0 +1,126 @@
+aid: carepatron
+url: https://raw.githubusercontent.com/api-evangelist/carepatron/refs/heads/main/apis.yml
+name: Carepatron
+kind: company
+description: >-
+  Carepatron is a cloud-based healthcare practice management and EHR platform
+  for therapists, counselors, psychologists, health coaches, nutritionists,
+  and other practitioners. It brings client records, appointment scheduling and
+  online booking, telehealth, AI-assisted clinical notes and documentation,
+  and billing/invoicing with insurance claims into one workspace, and markets
+  HIPAA/SOC/GDPR compliance across 100,000+ clinicians in 120+ countries. As of
+  this review Carepatron does NOT publish a documented public developer API - its
+  pricing page lists "API (coming soon)" on the Advanced plan, and there is no
+  developer portal, API reference, published base URL, OpenAPI definition, or
+  SDK. Third-party connectivity today is limited to a handful of native
+  integrations (Zoom, accounting software, Google Tag Manager). The APIs listed
+  below are logical/product-area groupings modeled from Carepatron's own feature
+  set; their endpoints are NOT documented and are marked as modeled, not
+  confirmed.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Practice Management
+- EHR
+- Therapy
+- Telehealth
+- Scheduling
+- Clinical Notes
+- Medical Billing
+created: '2026-07-10'
+modified: '2026-07-10'
+specificationVersion: '0.19'
+apis:
+- aid: carepatron:carepatron-clients-api
+  name: Carepatron Clients API (Modeled)
+  tags:
+  - Clients
+  - Records
+  - EHR
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.carepatron.com/features/client-management
+  properties:
+  - url: https://help.carepatron.com/en/
+    type: Documentation
+  - url: https://www.carepatron.com/pricing/
+    type: Pricing
+  description: >-
+    Modeled product-area API for client/patient records - the people a practice
+    serves, their demographics, contact details, and intake information.
+    endpointsModeled: true. Carepatron does not publish a developer API for this
+    surface; no base URL, reference, or OpenAPI exists as of the review date.
+- aid: carepatron:carepatron-appointments-api
+  name: Carepatron Appointments API (Modeled)
+  tags:
+  - Appointments
+  - Scheduling
+  - Calendar
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.carepatron.com/features/scheduling
+  properties:
+  - url: https://help.carepatron.com/en/
+    type: Documentation
+  - url: https://www.carepatron.com/pricing/
+    type: Pricing
+  description: >-
+    Modeled product-area API for scheduling and calendar - appointments, online
+    booking, and reminders. endpointsModeled: true. Carepatron does not publish a
+    developer API for this surface; scheduling automation today is done inside the
+    app or via native integrations (e.g. Zoom), not a documented public API.
+- aid: carepatron:carepatron-notes-api
+  name: Carepatron Notes and Documentation API (Modeled)
+  tags:
+  - Notes
+  - Documentation
+  - Clinical
+  - AI
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.carepatron.com/features/clinical-notes
+  properties:
+  - url: https://help.carepatron.com/en/collections/6831698-documentation
+    type: Documentation
+  - url: https://www.carepatron.com/pricing/
+    type: Pricing
+  description: >-
+    Modeled product-area API for clinical notes, forms, intakes, templates, and
+    AI-assisted documentation (the AI scribe / note taker). endpointsModeled: true.
+    Carepatron does not publish a developer API for this surface as of the review
+    date.
+- aid: carepatron:carepatron-billing-api
+  name: Carepatron Billing API (Modeled)
+  tags:
+  - Billing
+  - Invoicing
+  - Payments
+  - Insurance
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.carepatron.com/features/medical-billing
+  properties:
+  - url: https://help.carepatron.com/en/
+    type: Documentation
+  - url: https://www.carepatron.com/pricing/
+    type: Pricing
+  description: >-
+    Modeled product-area API for billing - invoices, payments, and insurance
+    claim management. endpointsModeled: true. Carepatron does not publish a
+    developer API for this surface; there is no documented base URL or reference.
+common:
+- type: Website
+  url: https://www.carepatron.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/carepatron
+- type: GitHubOrganization
+  url: https://github.com/Carepatron
+- type: Documentation
+  url: https://help.carepatron.com/en/
+- type: Plans
+  url: plans/carepatron-plans-pricing.yml
+- type: Pricing
+  url: https://www.carepatron.com/pricing/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
