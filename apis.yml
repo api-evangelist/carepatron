@@ -109,6 +109,10 @@ apis:
     claim management. endpointsModeled: true. Carepatron does not publish a
     developer API for this surface; there is no documented base URL or reference.
 common:
+- type: TrustCenter
+  url: security/carepatron-trust-center.yml
+- type: DomainSecurity
+  url: security/carepatron-domain-security.yml
 - type: Website
   url: https://www.carepatron.com
 - type: LinkedIn

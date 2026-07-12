@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.carepatron.com/
+url: https://trust.carepatron.com/
+certifications:
+- SOC 2
+- PCI DSS
+- HIPAA
+- GDPR
+evidence:
+- source: https://trust.carepatron.com/
+  keywords:
+  - soc 2
+  - pci dss
+  - hipaa
+  - trust center
+  - gdpr
