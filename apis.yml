@@ -41,7 +41,7 @@ tags:
   - Medical Billing
 created: '2026-07-10'
 modified: '2026-07-25'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: carepatron:carepatron-clients-api
     name: Carepatron Clients API (Modeled)
