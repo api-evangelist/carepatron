@@ -68,6 +68,12 @@ apis:
       - Notes
       - Documentation
       - Clinical
+      - Artificial Intelligence
+      - Modeled
+    tags_raw:
+      - Notes
+      - Documentation
+      - Clinical
       - AI
       - Modeled
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
