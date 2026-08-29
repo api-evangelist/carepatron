@@ -1,5 +1,7 @@
 aid: carepatron
 url: https://raw.githubusercontent.com/api-evangelist/carepatron/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 name: Carepatron
 kind: company
 description: >-
