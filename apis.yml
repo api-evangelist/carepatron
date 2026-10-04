@@ -57,6 +57,7 @@ modified: '2026-07-25'
 specificationVersion: '0.23'
 apis:
   - aid: carepatron:carepatron-clients-api
+    x-published: false
     name: Carepatron Clients API (Modeled)
     tags:
       - Clients
@@ -76,6 +77,7 @@ apis:
       endpointsModeled: true. Carepatron does not publish a developer API for this
       surface; no base URL, reference, or OpenAPI exists as of the review date.
   - aid: carepatron:carepatron-notes-api
+    x-published: false
     name: Carepatron Notes and Documentation API (Modeled)
     tags:
       - Notes
@@ -102,6 +104,7 @@ apis:
       Carepatron does not publish a developer API for this surface as of the review
       date.
   - aid: carepatron:carepatron-billing-api
+    x-published: false
     name: Carepatron Billing API (Modeled)
     tags:
       - Billing
