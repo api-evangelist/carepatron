@@ -46,6 +46,15 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/carepatron
 tags:
   - Healthcare
   - Practice Management
+  - Electronic Health Records
+  - Therapy
+  - Telehealth
+  - Scheduling
+  - Clinical Notes
+  - Medical Billing
+tags_raw:
+  - Healthcare
+  - Practice Management
   - EHR
   - Therapy
   - Telehealth
@@ -60,6 +69,11 @@ apis:
     x-published: false
     name: Carepatron Clients API (Modeled)
     tags:
+      - Clients
+      - Records
+      - Electronic Health Records
+      - Modeled
+    tags_raw:
       - Clients
       - Records
       - EHR
